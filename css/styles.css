@@ -1,42 +1,63 @@
+:root {
+  --brand-blue: #2196f3;
+  --background-grey: #2f303a;
+  --light-grey: #757575;
+  --lighter-grey: #f5f4fa;
+  --darkest: #212121;
+  --white: #fff;
+  --black: #000;
+  --transparent-white: rgba(255, 255, 255, 60%);
+  --line-light: #ececec;
+  --leaflet-border: #eee;
+}
 body {
   font-family: "Roboto", sans-serif;
-  color: #212121;
+  font-size: 14px;
+  color: var(--darkest);
+  background-color: var(--white);
+  letter-spacing: 0.03em;
 }
 button {
   cursor: pointer;
 }
-:root {
-  --brand-blue: #2196f3;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
-:root {
-  --background-grey: #2f303a;
-}
-:root {
-  --light-grey: #757575;
-}
-:root {
-  --lighter-grey: #f5f4fa;
+.list {
+  list-style: none;
 }
 .logo {
   font-family: "Raleway", sans-serif;
   text-decoration: none;
   font-size: 26px;
   color: var(--brand-blue);
+  line-height: 1.2;
 }
 .logo-upper {
-  color: #000;
+  color: var(--black);
 }
 .logo-bottom {
-  color: #fff;
+  color: var(--white);
 }
 .line {
-  border-top: 1px solid #ececec;
+  border-top: 1px solid var(--line-light);
 }
 .tel-mail a {
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--light-grey);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
 }
 .tel-mail a:hover {
   color: var(--brand-blue);
@@ -44,16 +65,15 @@ button {
 .tel-mail a:focus {
   color: var(--brand-blue);
 }
-.navigation a {
+.nav-link a {
   text-decoration: none;
   color: unset;
-  font-size: 14px;
   font-weight: 700;
 }
-.navigation a:hover {
+.nav-link a:hover {
   color: var(--brand-blue);
 }
-.navigation a:focus {
+.nav-link a:focus {
   color: var(--brand-blue);
 }
 .slogan-background {
@@ -65,40 +85,48 @@ button {
   text-transform: uppercase;
   text-align: center;
   line-height: 1.4;
-  color: #fff;
+  color: var(--white);
+  letter-spacing: 0.06em;
 }
 .button-order {
   background-color: var(--brand-blue);
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
-  color: #fff;
-}
-.advantage > li {
-  font-size: 14px;
   font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.06em;
+  line-height: 1.9;
+}
+.advantage li {
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.1;
 }
 .advantage p {
-  font-size: 14px;
   line-height: 1.7;
+  text-transform: none;
+  font-weight: 400;
   color: var(--light-grey);
 }
 .section-title h2 {
   font-size: 36px;
   font-weight: 700;
   text-align: center;
+  line-height: 1.2;
 }
 .team-background {
   background-color: var(--lighter-grey);
-}
-.card-background > li {
-  background-color: #fff;
 }
 .member h3 {
   font-size: 16px;
   font-weight: 500;
   text-align: center;
+  line-height: 1.2;
 }
 .position p {
   font-size: 16px;
+  color: var(--light-grey);
+  line-height: 1.2;
   text-align: center;
 }
 .bottom-background {
@@ -107,40 +135,49 @@ button {
 .address-links a {
   font-style: normal;
   text-decoration: none;
-  font-size: 14px;
   line-height: 1.7;
 }
+.address-links a:hover {
+  color: var(--brand-blue);
+}
+.address-links a:focus {
+  color: var(--brand-blue);
+}
 .bottom-address {
-  color: rgb(255, 255, 255);
+  color: var(--white);
 }
 .bottom-tel-mail {
-  color: rgba(255, 255, 255, 60%);
+  color: var(--transparent-white);
 }
 .filter button {
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
+  font-weight: 500;
+  color: var(--darkest);
+  letter-spacing: 0.03em;
   line-height: 1.6;
   background-color: var(--lighter-grey);
 }
 .filter button:hover {
   background-color: var(--brand-blue);
-  color: #fff;
+  color: var(--white);
 }
 .filter button:focus {
   background-color: var(--brand-blue);
-  color: #fff;
+  color: var(--white);
 }
 .filter button:active {
   background-color: var(--brand-blue);
-  color: #fff;
+  color: var(--white);
 }
-.leaflet li {
-  background-color: #fff;
-  border: 1px #eee;
+.leaflet > li {
+  border: 1px var(--leaflet-border);
 }
 .leaflet h3 {
   font-size: 18px;
   font-weight: 700;
   line-height: 2;
+  letter-spacing: 0.06em;
 }
 .leaflet p {
   font-size: 16px;
